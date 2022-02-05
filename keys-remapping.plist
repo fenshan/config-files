@@ -15,10 +15,6 @@
 		  "HIDKeyboardModifierMappingDst":0x700000029
 		  },
 		  {
-		  "HIDKeyboardModifierMappingSrc":0x700000039,
-		  "HIDKeyboardModifierMappingDst":0x7000000E0
-		  },
-		  {
 		  "HIDKeyboardModifierMappingSrc":0x700000029,
 		  "HIDKeyboardModifierMappingDst":0x700000039
 		  }
@@ -28,6 +24,11 @@
     <true/>
   </dict>
 </plist>
+
+
+<!--
+todo: caps lock to left ctrl when holding the key
+-->
 
 <!--
 info: https://rakhesh.com/mac/using-hidutil-to-map-macos-keyboard-keys/

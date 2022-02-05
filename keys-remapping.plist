@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>keys-remapping</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/bin/hidutil</string>
+      <string>property</string>
+      <string>--set</string>
+	  <string>{"UserKeyMapping":[
+		  {
+		  "HIDKeyboardModifierMappingSrc":0x700000039,
+		  "HIDKeyboardModifierMappingDst":0x700000029
+		  },
+		  {
+		  "HIDKeyboardModifierMappingSrc":0x700000039,
+		  "HIDKeyboardModifierMappingDst":0x7000000E0
+		  },
+		  {
+		  "HIDKeyboardModifierMappingSrc":0x700000029,
+		  "HIDKeyboardModifierMappingDst":0x700000039
+		  }
+		  ]}</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+  </dict>
+</plist>
+
+<!--
+info: https://rakhesh.com/mac/using-hidutil-to-map-macos-keyboard-keys/
+
+https://developer.apple.com/library/archive/technotes/tn2450/_index.html#//apple_ref/doc/uid/DTS40017618-CH1-KEY_TABLE_USAGES
+0x39: Keyboard Caps Lock
+0x29: Keyboard Escape
+0xE0: Keyboard Left Control
+
+hidutil property \-\-set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029}]}'
+
+To see the current mapping:
+hidutil property \-\-get "UserKeyMapping"
+
+place this file at ~/Library/LaunchAgents/
+
+execute: 
+launchctl load keys-remapping.plist
+-->

@@ -9,4 +9,11 @@ mkdir -p $bfdir
 [ -f ~/$zsh ] && mv ~/$zsh $bfdir/
 [ -f $keysdir/$keys ] && mv $keysdir/$keys $bfdir/
 cp $vim ~/$vim; cp $zsh ~/$zsh; cp $keys $keysdir/$keys
-launchctl load keys-remapping.plist
+
+ifstatement=$(launchctl list | grep "keys-remapping")
+if [[ "$ifstatement" == '' ]]
+then
+	launchctl load $keys
+fi
+
+echo "fen config files installed and old files stored at $bfdir/"

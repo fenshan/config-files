@@ -1,7 +1,7 @@
-### Installation:
+### Installation (macOS):
 1. Download repo
 2. Download dependencies listed below
-3. Run the script ```git-to-local.sh``` (macOS)
+3. Run the script ```git-to-local.sh```
 _____
 
 ### [.vimrc](https://github.com/fenshan/config-files/blob/main/.vimrc)

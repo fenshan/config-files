@@ -11,7 +11,15 @@ endif
 call plug#begin()
 Plug 'kyoz/purify', { 'rtp': 'vim' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'pandark/42header.vim'
 call plug#end()
+
+"42 header
+"https://github.com/pandark/42header.vim
+"guide for remapping: https://dev.to/mr_destructive/vim-keymapping-guide-3olb
+"In order to know for sure what is the name of the key you want to map, 
+"in Insert mode, press Ctrl-K and then the desired key combination.
+map <F1> :FortyTwoHeader<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Configuration example

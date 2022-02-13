@@ -19,5 +19,5 @@ _____
 _____
 
 ### [[caps lock]<->[esc] remapping](https://github.com/fenshan/config-files/blob/main/keys-remapping.plist)
-
+* Run the script ```kunremapping.sh``` before logging out, so the keys are unremapped for other users
 _____

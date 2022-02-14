@@ -16,3 +16,5 @@ echo "ESC & CAPS LOCK unremapped"
 # script to be manually run before logging out so the 
 # key remapping is not applied to other users
 
+# if you want to unremap everything:
+# hidutil property --set '{"UserKeyMapping":[]}'

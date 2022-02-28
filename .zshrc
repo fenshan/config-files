@@ -106,6 +106,9 @@ source $ZSH/oh-my-zsh.sh
 alias norm="norminette -R CheckForbiddenSourceHeader"
 alias gccw="gcc -Wall -Wextra -Werror"
 alias a="./a.out"
+# TODO signed commits 
+# alias commit="git commit --author "fenshan <nicolasviolantfen@gmail.com>" -Sm" #para los commits en 42 tiene que ser otro user y email creo, asegurarme! si no, quizás lo puedo cambiar directamente en el gitconfig.user
+alias commit="git commit -m"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
